@@ -6,15 +6,16 @@ using System.Threading.Tasks;
 
 namespace DemoLibrary
 {
-    public class Book : IBook, IBorrowable
+    public class AudioBook : IBorrowableAudioBook
     {
-        public string Author { get ; set ; }
-        public DateTime BorrowDate { get ; set ; }
+        public string LibraryID { get; set; }
+        public string Title { get; set; }
+        public string Author { get; set; }
+        public DateTime BorrowDate { get; set; }
         public string Borrower { get; set; }
         public int CheckoutDurationInDays { get; set; }
-        public string LibraryID { get; set; }
-        public int Pages { get; set; }
-        public string Title { get; set; }
+
+        public int RuntimeInMinutes { get; set; }
 
         public void CheckIn()
         {
